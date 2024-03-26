@@ -1,0 +1,87 @@
+body{
+    background-color: bisque;
+}
+
+.main-menu{
+    text-align: center;
+
+}
+.main-menu > a{
+    margin: 5px;
+    padding: 5px;
+    background-color: gray;
+    border-style: solid;
+    
+}
+.main-menu > a:hover{
+    background-color: lightgray;
+}
+
+.view{
+    display: flex;
+}
+
+.view > div{
+    margin:1%;
+}
+
+.data-table{
+    width: 50%;
+    
+}
+.select-parties{
+    background-color: lightgray;
+    width:50%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.select-parties > button {
+    font-size:12px;
+    margin:10px;
+    padding:15px;
+}
+
+.select-parties > button:hover{
+    border: solid green;
+}
+
+
+
+.mandati{
+    display: flex;
+    flex: row;
+    /* list-style-type: none; */
+    margin: 0;
+    padding: 0;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 2px solid black;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:nth-child(odd) {
+    background-color: white;
+}
+tr:hover{
+    background-color: lightslategray;
+}
+
+footer{
+    text-align: center;
+    background-color: lightslategray;
+    color: black;
+    font-size:20px;
+}

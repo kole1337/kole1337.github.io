@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <link rel="stylesheet" href="govcalcStyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="govcalc.js"></script> -->
+
+    <title>GovCalc</title>
+</head>
+<body>
+    <div class="menu">
+        <h1>GovCalc</h1>
+        <nav class="main-menu">
+            <a href="govcalc.html">Главна страница</a> |
+            <a href="sglobka.html">Сглобканатор</a> |
+            <a href="segashna.html">Сегашна сглобка</a>
+        </nav>
+    </div>
+
+    
+    <p>Zaglavna stranica</p>
+
+<div class="view">
+
+    <div class="data-table">
+        <h1>Избори 2023</h1>
+        <p>Резултати от изборите през 2023</p>
+        <table>
+            <tr>
+                <td>Партия</td>
+                <td>Гласове</td>
+                <td>Процент (от общия)</td>
+                <td>Мандати</td>
+            </tr>
+            <tr>
+                <td>ГЕРБ</td>
+                <td>669 361</td>
+                <td>26.49%</td>
+                <td>69</td>
+            </tr>
+            <tr>
+                <td>ПП-ДБ</td>
+                <td>621 069</td>
+                <td>24.56%</td>
+                <td>64</td>
+            </tr>
+            <tr>
+                <td>Възраждане</td>
+                <td>358 174</td>
+                <td>14.16%</td>
+                <td>37</td>
+            </tr>
+            <tr>
+                <td>ДПС</td>
+                <td>347 700</td>
+                <td>13.75%</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>БСП</td>
+                <td>225 914</td>
+                <td>8.93%</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>ИТН</td>
+                <td>103 971</td>
+                <td>4.11%</td>
+                <td>11</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="select-parties">
+        <h1>Правителствен калкулатор</h1>
+        <p>Общо мандати: 240</p>
+        <button id="gerb" class="GERB" onclick="setGovName(this)">ГЕРБ: 69</button>
+        <button class="PP-DB" onclick="setGovName(this)">ПП-ДБ: 64</button>
+        <button class="Vyzrazhdane" onclick="setGovName(this)">Възраждане: 37</button>
+        <button class="DPS" onclick="setGovName(this)">ДПС: 36</button>
+        <button class="BSP" onclick="setGovName(this)">БСП: 23</button>
+        <button class="ITN" onclick="setGovName(this)">ИТН: 11</button>
+
+        <h2 id="gov">Правителство: </h2>
+        <h2 id ="seats">Мандати: ---/121</h2>
+        <div class="mandati">
+            <h2>Мандати:</h2></li>
+            <h2 id="numSeats">0</h2>
+            <h2>/121</h2>
+        </div>
+        <button class="clear-button" onclick="clearGovData()">Изчисти</button>
+    </div>
+
+</div>
+
+    <div class="footer-section">
+        <footer>
+            <nav class="footer-menu">
+                <a href="https://github.com/kole1337/govcalc">GitHub</a> |
+                <a href="https://results.cik.bg">ЦИК данни</a> |
+                <a href="https://www.strazha.bg">Стража</a>
+            </nav>
+        </footer>
+    </div>
+
+    <script src="govcalc.js"></script>
+
+</body>
+</html>
