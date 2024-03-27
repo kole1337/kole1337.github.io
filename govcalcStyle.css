@@ -207,13 +207,13 @@
     }
     
     footer{
-        width: 100%;
+        /* width: 100%; */
         height: auto;
         text-align: center;
         background-color: lightslategray;
         color: black;
         padding: 25px;
-        font-size:35px;
+        font-size:20px;
     
         a:hover{
             color: white;
