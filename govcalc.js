@@ -31,7 +31,13 @@ function setGovName(getButtonClass){
         removeSeats( parseInt(buttonArr[1] , 10) );
     }
 
-    
+    var seats = parseInt(document.getElementById("numSeats").innerText, 10);
+    if(seats <121){
+        document.getElementById("numSeats").style.color = "red";
+    }else{
+        document.getElementById("numSeats").style.color = "green";
+
+    }
 }
 
 
