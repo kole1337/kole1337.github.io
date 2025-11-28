@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +13,15 @@
       color: #222;
     }
 
-    header, footer {
+    header,
+    footer {
       background: #d7d9e6;
       padding: 15px 0;
       text-align: center;
       position: relative;
     }
+
+
 
     nav a {
       margin: 0 20px;
@@ -26,6 +30,7 @@
       padding: 6px 12px;
       border-radius: 8px;
     }
+
     nav a:hover {
       background: #f3f3f3;
     }
@@ -37,13 +42,28 @@
       margin: auto;
     }
 
+    .container {
+      margin-top: 30px;
+      /* height: px; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     @media (max-width: 700px) {
-      nav a { display: none; }
-      .hamburger { display: block; }
+      nav a {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
       nav.active a {
         display: block;
         padding: 10px;
       }
+
       nav {
         display: flex;
         flex-direction: column;
@@ -59,7 +79,7 @@
       border-radius: 8px;
       border: 1px solid #aaa;
       cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     .projects-container {
@@ -76,13 +96,14 @@
       background: #fff;
       width: 320px;
       border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
       padding-bottom: 20px;
       overflow: hidden;
       transition: transform .2s ease;
     }
 
     .project-card:hover {
+      cursor: pointer;
       transform: translateY(-6px);
     }
 
@@ -132,100 +153,165 @@
       margin: 0 10px;
       color: #000;
     }
-      /* Modal backdrop */
+
+    /* Modal backdrop */
     .modal-backdrop {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.45);
+      background: rgba(0, 0, 0, 0.45);
       backdrop-filter: blur(4px);
       display: none;
       z-index: 900;
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-    .modal.show { animation: fadeIn 0.35s ease forwards; }
-    .modal.hide { animation: fadeOut 0.25s ease forwards; }
-    @keyframes fadeIn { from {opacity:0; transform:translate(-50%, -46%);} to {opacity:1; transform:translate(-50%, -50%);} }
-    @keyframes fadeOut { from {opacity:1; transform:translate(-50%, -50%);} to {opacity:0; transform:translate(-50%, -46%);} }
 
-</style>
+    .modal.show {
+      animation: fadeIn 0.35s ease forwards;
+    }
+
+
+    .modal.hide {
+      animation: fadeOut 0.25s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -46%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(-50%, -46%);
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <nav>
-    <div class="hamburger">☰</div>
-    <a href="index.html">Professional Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="personal.html">Personal</a>
-  </nav>
-  <select id="filter-dropdown">
-    <option value="">Filter by tag</option>
-    <!-- Add your tags manually below -->
-    <option value="java">Java</option>
-    <option value="python">Python</option>
-    <option value="sql">SQL</option>
-    <option value="networking">Networking</option>
-  </select>
-</header>
+  <header>
+    <nav>
+      <div class="hamburger">☰</div>
+      <a href="index.html">Professional Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="personal.html">Personal</a>
+    </nav>
 
-<div class="projects-container">
-  <div class="project-card" data-tags="java mysql">
-    <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" />
-    <div class="project-content">
-      <div class="project-title">Example title</div>
-      <div class="project-desc">This is the project description</div>
-      <div class="tags">
-        <div class="tag">Java</div>
-        <div class="tag">MySQL</div></div></div></div>
+  </header>
 
-  <div class="project-card" data-tags="python sql distributed">
-    <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg" />
-    <div class="project-content">
-      <div class="project-title">Example title</div>
-      <div class="project-desc">This is the project description</div>
-      <div class="tags">
-        <div class="tag">Python</div>
-        <div class="tag">SQL</div>
-        <div class="tag">Distributed System</div>
-      </div>
-    </div>
+  <div class="container">
+    <select class="item" id="filter-dropdown" style="display: flex;">
+      <option value="">All projects</option>
+      <!-- Add your tags manually below -->
+      <option value="java">Java</option>
+      <option value="python">Python</option>
+      <option value="js">JavaScript</option>
+      <option value="go">Go</option>
+      <option value="html">HTML&CSS</option>
+      <option value="sql">SQL</option>
+      <option value="networking">Networking</option>
+
+    </select>
   </div>
 
-  <div class="project-card" data-tags="java networking">
-    <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sun_rise_and_sunset.jpg/640px-Sun_rise_and_sunset.jpg" />
-    <div class="project-content">
-      <div class="project-title">Example title</div>
-      <div class="project-desc">This is the project description</div>
-      <div class="tags">
-        <div class="tag">Java</div>
-        <div class="tag">Networking</div>
+  <div class="projects-container">
+    <div class="project-card" data-tags="java mysql">
+      <img class="project-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" />
+      <div class="project-content">
+        <div class="project-title">Example title</div>
+        <div class="project-desc">This is the project description</div>
+        <div class="tags">
+          <div class="tag">Java</div>
+          <div class="tag">MySQL</div>
+        </div>
       </div>
     </div>
+
+    <div class="projects-container">
+      <div class="project-card" data-tags="js html">
+        <img class="project-img"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" />
+        <div class="project-content">
+          <div class="project-title">This website</div>
+          <div class="project-desc">Created this portfolio website so I can show off my programming skills when applying
+            for jobs.</div>
+          <div class="tags">
+            <div class="tag">HTML&CSS</div>
+            <div class="tag">JavaScript</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="python sql distributed">
+        <img class="project-img"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg" />
+        <div class="project-content">
+          <div class="project-title">Example title</div>
+          <div class="project-desc">This is the project description</div>
+          <div class="tags">
+            <div class="tag">Python</div>
+            <div class="tag">SQL</div>
+            <div class="tag">Distributed System</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="java networking">
+        <img class="project-img"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sun_rise_and_sunset.jpg/640px-Sun_rise_and_sunset.jpg" />
+        <div class="project-content">
+          <div class="project-title">Example title</div>
+          <div class="project-desc">This is the project description</div>
+          <div class="tags">
+            <div class="tag">Java</div>
+            <div class="tag">Networking</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Modal Backdrop -->
+  <div id="modal-backdrop" class="modal-backdrop"></div>
+
+  <!-- Modal Popup -->
+  <div id="project-modal" class="modal"
+    style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; padding:25px; width:420px; max-width:90%; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,0.25); z-index:1000;">
+    <span id="modal-close"
+      style="cursor:pointer; position:absolute; top:10px; right:15px; font-size:22px;">&times;</span>
+    <h2 id="modal-title"></h2>
+    <div id="modal-links" style="margin:10px 0; display:flex; gap:12px;"></div>
+    <div id="modal-tags" style="margin:10px 0; display:flex; gap:8px; flex-wrap:wrap;"></div>
+    <p id="modal-description" style="margin-top:10px; line-height:1.4;"></p>
   </div>
-</div>
+
+</body>
 
 <footer>
   <p>All Pages:</p>
   <a href="index.html">Professional Experience</a> |
   <a href="projects.html">Projects</a> |
   <a href="personal.html">Personal</a>
-<!-- Modal Backdrop -->
-<div id="modal-backdrop" class="modal-backdrop"></div>
 
-<!-- Modal Popup -->
-<div id="project-modal" class="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; padding:25px; width:420px; max-width:90%; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,0.25); z-index:1000;">
-  <span id="modal-close" style="cursor:pointer; position:absolute; top:10px; right:15px; font-size:22px;">&times;</span>
-  <h2 id="modal-title"></h2>
-  <div id="modal-links" style="margin:10px 0; display:flex; gap:12px;"></div>
-  <div id="modal-tags" style="margin:10px 0; display:flex; gap:8px; flex-wrap:wrap;"></div>
-  <p id="modal-description" style="margin-top:10px; line-height:1.4;"></p>
-</div>
 
-<footer>
+</footer>
 
 <script>
   const nav = document.querySelector('nav');
@@ -271,7 +357,7 @@
       modal.style.display = 'block';
       const backdrop = document.getElementById('modal-backdrop');
       backdrop.style.display = 'block';
-      setTimeout(()=> backdrop.style.opacity = '1', 10);
+      setTimeout(() => backdrop.style.opacity = '1', 10);
     });
   });
 
@@ -293,5 +379,5 @@
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
 
-</body>
+
 </html>
