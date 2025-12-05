@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,6 +18,17 @@
       padding: 15px 0;
       text-align: center;
     }
+
+    footer {
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    footer a {
+      text-decoration: none;
+      margin: 0 10px;
+      color: #000;
+    }
     nav a {
       margin: 0 20px;
       text-decoration: none;
@@ -24,21 +36,53 @@
       padding: 6px 12px;
       border-radius: 8px;
     }
+
     nav a:hover {
       background: #f3f3f3;
     }
+
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      margin: auto;
+    }
+
+
+    @media (max-width: 700px) {
+      nav a {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      nav.active a {
+        display: block;
+        padding: 10px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
       padding: 20px;
       text-align: center;
     }
+
     #profile-img {
       width: 180px;
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
     }
+
     .icons img {
       width: 32px;
       margin: 0 10px;
@@ -53,6 +97,7 @@
     .gallery {
       margin-top: 40px;
     }
+
     .gallery-main {
       width: 100%;
       border: 4px solid #000;
@@ -61,15 +106,17 @@
       height: 350px;
       position: relative;
     }
+
     .gallery-main img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .gallery-desc {
       position: absolute;
       bottom: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.4);
       color: #fff;
       width: 100%;
       padding: 6px;
@@ -139,7 +186,8 @@
       margin-top: 20px;
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 90%;
       max-width: 400px;
       padding: 10px;
@@ -180,41 +228,89 @@
         flex-direction: column;
       }
     }
+
+    .experience-section {
+      text-align: left;
+      margin: 40px;
+      padding: 20px;
+      /* font-family: 'Georgia', serif; */
+    }
+
+    .exp-header {
+      font-size: 28px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #000;
+      padding-bottom: 6px;
+    }
+
+    .exp-entry {
+      margin-top: 25px;
+    }
+
+    .exp-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .exp-role {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .exp-date {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .exp-description {
+      margin-top: 6px;
+      text-align: justify;
+      line-height: 1.5;
+    }
   </style>
 </head>
+
 <body>
 
-<header>
-  <nav>
-    <div class="hamburger">☰</div>
-    <a href="index.html">Professional Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="personal.html">Personal</a>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <div class="hamburger">☰</div>
+      <a href="index.html">About me</a>
+      <a href="projects.html">Projects</a>
+      <!-- <a href="personal.html">Personal</a> -->
+    </nav>
+  </header>
 
-<div class="container">
-  <img id="profile-img" src="docs/assets/1761741507120 (1).jpg" alt="Profile" />
-  <h2>Nikola Parushev</h2>
-  <div class="icons">
-    <a href="https://www.linkedin.com/in/nikola-parushev/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" /></a>
-    <a href="https://www.goodreads.com/user/show/143017150-nikola"><img src="docs/assets/Goodreads_logo_-_SuperTinyIcons.svg.png" /></a>
-  </div>
-  <p>Searching for internships/gradroles in IT/Finance</p>
 
-  <!-- Gallery -->
-  <div class="gallery">
-    <div class="gallery-main" id="main-gallery">
-      <img id="main-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg" />
-      <div class="gallery-desc" id="main-desc">A little doggie</div>
+  <div class="container">
+    <img id="profile-img" src="assets/1761741507120 (1).jpg" alt="Profile" />
+    <h2>Nikola Parushev</h2>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/nikola-parushev/"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" /></a>
+      <a href="https://www.goodreads.com/user/show/143017150-nikola"><img
+          src="assets/Goodreads_logo_-_SuperTinyIcons.svg.png" /></a>
+    </div>
+    <p>Searching for internships/gradroles in IT/Finance</p>
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <div class="gallery-main" id="main-gallery">
+        <img id="main-img"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg" />
+        <div class="gallery-desc" id="main-desc">A little doggie</div>
+      </div>
+
+      <div class="thumbs" id="thumbs"></div>
     </div>
 
-    <div class="thumbs" id="thumbs"></div>
+    <!-- <hr /> -->
   </div>
-
-  <hr />
-
-  <h2>Professional Experience</h2>
+  <!-- <h2>Professional Experience</h2>
   <div class="exp-list">
     <div class="job">
       <div class="dot" style="background:black;"></div>
@@ -233,22 +329,53 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+  <div class="experience-section">
+    <div class="exp-header">Professional Experience</div>
 
-<footer>
-  <p>All Pages:</p>
-  <a href="#">Professional Experience</a> |
-  <a href="#">Academic</a> |
-  <a href="#">Personal</a>
 
-  <form>
-    <h3>Contact Me</h3>
-    <input type="text" placeholder="Your Name" required /><br />
-    <input type="email" placeholder="Your Email" required /><br />
-    <textarea placeholder="Message" rows="4" required></textarea><br />
-    <button type="submit">Send</button>
-  </form>
-</footer>
+    <div class="exp-entry">
+      <div class="exp-title-row">
+        <div class="exp-role">Personal Onboarding Associate – Starling Bank</div>
+        <div class="exp-date">Oct 2023 – Present</div>
+      </div>
+      <p class="exp-description">
+        I am responsible for reviewing and completing background checks for banking applications
+        for personal accounts. I quickly adapted to internal processes and became one of the most
+        knowledgeable members of my team. My KPI scores consistently exceed 100%, with QC, QA,
+        and knowledge checks achieving 100% month over month. I have also taken on mentoring and
+        supervisory responsibilities for team members and colleagues across departments.
+      </p>
+    </div>
+
+
+    <div class="exp-entry">
+      <div class="exp-title-row">
+        <div class="exp-role">Shift Manager – Company Name</div>
+        <div class="exp-date">Aug 2023 – Oct 2023</div>
+      </div>
+      <p class="exp-description">
+        Brief description of responsibilities and achievements in this role.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>All Pages:</p>
+    <a href="index.html">About me</a> |
+    <!-- <a href="#">Academic</a> | -->
+    <a href="projects.html">Projects</a>
+
+    <form>
+      <h3>Contact Me</h3>
+      <!-- <input type="text" placeholder="Your Name" required /><br />
+      <input type="email" placeholder="Your Email" required /><br />
+      <textarea placeholder="Message" rows="4" required></textarea><br />
+      <button type="submit">Send</button> -->
+      <a>You can email me at <a href="mailto:np3g22@soton.ac.uk">np3g22@soton.ac.uk </a>  or  <a href="mailto:ndparushev@gmail.com">ndparushev@gmail.com </a></a>
+      
+    </form>
+  </footer>
 
 <script>
     const nav = document.querySelector('nav');
@@ -269,31 +396,36 @@
     }
   ];
 
-  const mainImg = document.getElementById('main-img');
-  const mainDesc = document.getElementById('main-desc');
-  const thumbs = document.getElementById('thumbs');
+    const mainImg = document.getElementById('main-img');
+    const mainDesc = document.getElementById('main-desc');
+    const thumbs = document.getElementById('thumbs');
 
-  images.forEach((img, i) => {
-    const div = document.createElement('div');
-    div.className = 'thumb';
-    div.innerHTML = `<img src="${img.url}"><div class='gallery-desc'>${img.desc}</div>`;
-    div.onclick = () => switchImage(i);
-    thumbs.appendChild(div);
-  });
+    const nav = document.querySelector('nav');
+    const burger = document.querySelector('.hamburger');
+    burger.onclick = () => nav.classList.toggle('active');
 
-  let current = 0;
+    images.forEach((img, i) => {
+      const div = document.createElement('div');
+      div.className = 'thumb';
+      div.innerHTML = `<img src="${img.url}"><div class='gallery-desc'>${img.desc}</div>`;
+      div.onclick = () => switchImage(i);
+      thumbs.appendChild(div);
+    });
 
-  function switchImage(i) {
-    current = i;
-    mainImg.src = images[i].url;
-    mainDesc.textContent = images[i].desc;
-  }
+    let current = 0;
 
-  setInterval(() => {
-    current = (current + 1) % images.length;
-    switchImage(current);
-  }, 10000);
-</script>
+    function switchImage(i) {
+      current = i;
+      mainImg.src = images[i].url;
+      mainDesc.textContent = images[i].desc;
+    }
+
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      switchImage(current);
+    }, 10000);
+  </script>
 
 </body>
+
 </html>
