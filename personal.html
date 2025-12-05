@@ -22,6 +22,8 @@
             background: #d7d9e6;
             padding: 15px 0;
             text-align: center;
+                  position: relative;
+
         }
 
         footer {
@@ -78,12 +80,13 @@
             max-width: 500px;
         }
 
-    .hamburger {
-      display: none;
-      font-size: 30px;
-      cursor: pointer;
-      margin: auto;
-    }
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            margin: auto;
+        }
+
         .loader {
             margin-top: 30px;
             border: 6px solid rgba(0, 0, 0, 0.2);
@@ -104,25 +107,26 @@
                 transform: rotate(360deg);
             }
         }
-             @media (max-width: 700px) {
-      nav a {
-        display: none;
-      }
 
-      .hamburger {
-        display: block;
-      }
+        @media (max-width: 700px) {
+            nav a {
+                display: none;
+            }
 
-      nav.active a {
-        display: block;
-        padding: 10px;
-      }
+            .hamburger {
+                display: block;
+            }
 
-      nav {
-        display: flex;
-        flex-direction: column;
-      }
-    }
+            nav.active a {
+                display: block;
+                padding: 10px;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
@@ -149,14 +153,17 @@
         <a href="index.html">Professional Experience</a>
         <a href="projects.html">Projects</a>
         <a href="personal.html">Personal</a>
+        <a>You can email me at <a href="mailto:np3g22@soton.ac.uk">np3g22@soton.ac.uk </a> or <a
+                href="mailto:ndparushev@gmail.com">ndparushev@gmail.com </a></a>
+
     </footer>
 
 </body>
 
 <script>
-  const nav = document.querySelector('nav');
-  const burger = document.querySelector('.hamburger');
-  burger.onclick = () => nav.classList.toggle('active');
+    const nav = document.querySelector('nav');
+    const burger = document.querySelector('.hamburger');
+    burger.onclick = () => nav.classList.toggle('active');
 </script>
 
 </html>

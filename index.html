@@ -11,12 +11,17 @@
       font-family: Arial, sans-serif;
       background: #e8e1cc;
       color: #222;
+                  display: flex;
+            flex-direction: column;
+                  min-height: 100vh;
     }
-    header, footer
-     {
+
+    header,
+    footer {
       background: #d7d9e6;
       padding: 15px 0;
       text-align: center;
+      position: relative;
     }
 
     footer {
@@ -29,6 +34,7 @@
       margin: 0 10px;
       color: #000;
     }
+
     nav a {
       margin: 0 20px;
       text-decoration: none;
@@ -87,12 +93,14 @@
       width: 32px;
       margin: 0 10px;
     }
+
     .hamburger {
       display: none;
       font-size: 30px;
       cursor: pointer;
       margin: auto;
     }
+
     /* Gallery */
     .gallery {
       margin-top: 40px;
@@ -209,7 +217,7 @@
       background: #555;
     }
 
-     @media (max-width: 700px) {
+    @media (max-width: 700px) {
       nav a {
         display: none;
       }
@@ -281,19 +289,19 @@
       <div class="hamburger">☰</div>
       <a href="index.html">About me</a>
       <a href="projects.html">Projects</a>
-      <!-- <a href="personal.html">Personal</a> -->
+      <a href="personal.html">Personal</a>
     </nav>
   </header>
 
 
   <div class="container">
-    <img id="profile-img" src="assets/1761741507120 (1).jpg" alt="Profile" />
+    <img id="profile-img" src="./docs/assets/1761741507120 (1).jpg" alt="Profile" />
     <h2>Nikola Parushev</h2>
     <div class="icons">
       <a href="https://www.linkedin.com/in/nikola-parushev/"><img
           src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" /></a>
       <a href="https://www.goodreads.com/user/show/143017150-nikola"><img
-          src="assets/Goodreads_logo_-_SuperTinyIcons.svg.png" /></a>
+          src="./docs/assets/Goodreads_logo_-_SuperTinyIcons.svg.png" /></a>
     </div>
     <p>Searching for internships/gradroles in IT/Finance</p>
 
@@ -336,35 +344,65 @@
 
     <div class="exp-entry">
       <div class="exp-title-row">
-        <div class="exp-role">Personal Onboarding Associate – Starling Bank</div>
-        <div class="exp-date">Oct 2023 – Present</div>
+        <div class="exp-role">Personal Onboarding Associate - Starling Bank</div>
+        <div class="exp-date">Oct 2023 - Present</div>
       </div>
       <p class="exp-description">
-        I am responsible for reviewing and completing background checks for banking applications
-        for personal accounts. I quickly adapted to internal processes and became one of the most
-        knowledgeable members of my team. My KPI scores consistently exceed 100%, with QC, QA,
-        and knowledge checks achieving 100% month over month. I have also taken on mentoring and
-        supervisory responsibilities for team members and colleagues across departments.
+        I am responsible to review and do background checks for banking applications for personal accounts.
+        I quickly got accustomed to the processes in the job, and I became one of the most knowledgable and efficient
+        people in my team.
+        My KPI scores above 100% , and my QC, QA and knowledge checks are all at 100% consistently month over month.
+        I've started supervising and mentoring people from my team and other teams.
       </p>
     </div>
 
 
     <div class="exp-entry">
       <div class="exp-title-row">
-        <div class="exp-role">Shift Manager – Company Name</div>
-        <div class="exp-date">Aug 2023 – Oct 2023</div>
+        <div class="exp-role">Shift Manager - Starbucks</div>
+        <div class="exp-date">Aug 2023 - Oct 2023</div>
       </div>
       <p class="exp-description">
-        Brief description of responsibilities and achievements in this role.
+        I was promoted to a Shift Manager within my first year in the company.
+        I was responsible for the backroom and had to make sure our daily and weekly deliveries are accounted for,
+        both as stock count and actual delivery requests.
+      </p>
+    </div>
+
+
+    <div class="exp-entry">
+      <div class="exp-title-row">
+        <div class="exp-role">Barista - Starbucks</div>
+        <div class="exp-date">Sept 2022 - Aug 2023</div>
+      </div>
+      <p class="exp-description">
+        I maintained steady KPI after my probation.
+        I had a proactive stance on following regulations and boosting our store's sales.
+      </p>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-title-row">
+        <div class="exp-role">Summer Internship (IT) - <a href="https://en.microinvest.net/">Mikroinvest</a></div>
+        <div class="exp-date">Jun 2022 - Jul 2022</div>
+        <div class="exp-date">Jun 2021 - Jul 2021</div>
+      </div>
+      <p class="exp-description">
+        I had the opportunity to work hands-on with the development and hardware maintenance teams.
+        My tasks included test deployment of company software on new proprietary devices, setting up machines to be used
+        by clients.
+        I developed my own receipt-printing application, which had to communicate with a database and the equipment, and
+        have proper UI, with the company's language (B4A).
       </p>
     </div>
   </div>
 
+
   <footer>
     <p>All Pages:</p>
-    <a href="index.html">About me</a> |
-    <!-- <a href="#">Academic</a> | -->
+    <a href="index.html">About me</a>
     <a href="projects.html">Projects</a>
+    <a href="personal.html">Personal</a>
 
     <form>
       <h3>Contact Me</h3>
@@ -372,27 +410,28 @@
       <input type="email" placeholder="Your Email" required /><br />
       <textarea placeholder="Message" rows="4" required></textarea><br />
       <button type="submit">Send</button> -->
-      <a>You can email me at <a href="mailto:np3g22@soton.ac.uk">np3g22@soton.ac.uk </a>  or  <a href="mailto:ndparushev@gmail.com">ndparushev@gmail.com </a></a>
-      
+      <a>You can email me at <a href="mailto:np3g22@soton.ac.uk">np3g22@soton.ac.uk </a> or <a
+          href="mailto:ndparushev@gmail.com">ndparushev@gmail.com </a></a>
+
     </form>
   </footer>
 
-<script>
+  <script>
 
-  const images = [
-    {
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg",
-      desc: "Description 1"
-    },
-    {
-      url: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg",
-      desc: "Description 2"
-    },
-    {
-      url: "https://upload.wikimedia.org/wikipedia/commons/5/57/Tour_Eiffel_Wikimedia_Commons.jpg",
-      desc: "Description 3"
-    }
-  ];
+    const images = [
+      {
+        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg",
+        desc: "Description 1"
+      },
+      {
+        url: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg",
+        desc: "Description 2"
+      },
+      {
+        url: "https://upload.wikimedia.org/wikipedia/commons/5/57/Tour_Eiffel_Wikimedia_Commons.jpg",
+        desc: "Description 3"
+      }
+    ];
 
     const mainImg = document.getElementById('main-img');
     const mainDesc = document.getElementById('main-desc');
