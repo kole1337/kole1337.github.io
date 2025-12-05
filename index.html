@@ -11,7 +11,7 @@
       background: #e8e1cc;
       color: #222;
     }
-    header, 
+    header, footer
      {
       background: #d7d9e6;
       padding: 15px 0;
@@ -42,6 +42,12 @@
     .icons img {
       width: 32px;
       margin: 0 10px;
+    }
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      margin: auto;
     }
     /* Gallery */
     .gallery {
@@ -154,6 +160,26 @@
     button:hover {
       background: #555;
     }
+
+     @media (max-width: 700px) {
+      nav a {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      nav.active a {
+        display: block;
+        padding: 10px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
@@ -225,6 +251,9 @@
 </footer>
 
 <script>
+    const nav = document.querySelector('nav');
+  const burger = document.querySelector('.hamburger');
+  burger.onclick = () => nav.classList.toggle('active');
   const images = [
     {
       url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg",

@@ -21,8 +21,6 @@
       position: relative;
     }
 
-
-
     nav a {
       margin: 0 20px;
       text-decoration: none;
@@ -44,7 +42,6 @@
 
     .container {
       margin-top: 30px;
-      /* height: px; */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -154,7 +151,6 @@
       color: #000;
     }
 
-    /* Modal backdrop */
     .modal-backdrop {
       position: fixed;
       top: 0;
@@ -172,7 +168,6 @@
     .modal.show {
       animation: fadeIn 0.35s ease forwards;
     }
-
 
     .modal.hide {
       animation: fadeOut 0.25s ease forwards;
@@ -213,13 +208,11 @@
       <a href="projects.html">Projects</a>
       <a href="personal.html">Personal</a>
     </nav>
-
   </header>
 
   <div class="container">
     <select class="item" id="filter-dropdown" style="display: flex;">
       <option value="">All projects</option>
-      <!-- Add your tags manually below -->
       <option value="java">Java</option>
       <option value="python">Python</option>
       <option value="js">JavaScript</option>
@@ -227,75 +220,78 @@
       <option value="html">HTML&CSS</option>
       <option value="sql">SQL</option>
       <option value="networking">Networking</option>
-
+      <option value="csharp">C#</option>
     </select>
   </div>
 
   <div class="projects-container">
-    <div class="project-card" data-tags="java mysql">
-      <img class="project-img"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" />
+    <div class="project-card" data-tags="python" data-git="https://github.com/kole1337/Advent-of-Code-2024">
+      <img class="project-img" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*aH6V3vs_ICdpnvPi90XB7w.jpeg" />
       <div class="project-content">
-        <div class="project-title">Example title</div>
-        <div class="project-desc">This is the project description</div>
+        <div class="project-title">Advent of Code 2024</div>
+        <div class="project-desc">Repository for my solutions for Advent of Code 2024. I solved it all in python</div>
         <div class="tags">
-          <div class="tag">Java</div>
-          <div class="tag">MySQL</div>
+          <div class="tag">Python</div>
         </div>
       </div>
     </div>
 
     <div class="projects-container">
-      <div class="project-card" data-tags="js html">
-        <img class="project-img"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" />
-        <div class="project-content">
-          <div class="project-title">This website</div>
-          <div class="project-desc">Created this portfolio website so I can show off my programming skills when applying
-            for jobs.</div>
-          <div class="tags">
-            <div class="tag">HTML&CSS</div>
-            <div class="tag">JavaScript</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-tags="python sql distributed">
-        <img class="project-img"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg" />
-        <div class="project-content">
-          <div class="project-title">Example title</div>
-          <div class="project-desc">This is the project description</div>
-          <div class="tags">
-            <div class="tag">Python</div>
-            <div class="tag">SQL</div>
-            <div class="tag">Distributed System</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-tags="java networking">
-        <img class="project-img"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sun_rise_and_sunset.jpg/640px-Sun_rise_and_sunset.jpg" />
-        <div class="project-content">
-          <div class="project-title">Example title</div>
-          <div class="project-desc">This is the project description</div>
-          <div class="tags">
-            <div class="tag">Java</div>
-            <div class="tag">Networking</div>
-          </div>
+    <div class="project-card" data-tags="python java csharp" data-git="https://github.com/kole1337/Advent-of-Code-2024">
+      <img class="project-img" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*aH6V3vs_ICdpnvPi90XB7w.jpeg" />
+      <div class="project-content">
+        <div class="project-title">Advent of Code 2025</div>
+        <div class="project-desc">Repository for my solutions for Advent of Code 2025. I am solving each day in a different language</div>
+        <div class="tags">
+          <div class="tag">Python</div>
+          <div class="tag">Java</div>
+          <div class="tag">C#</div>
         </div>
       </div>
     </div>
 
-      <!-- Modal Backdrop -->
+    <div class="project-card" data-tags="js html" data-git="https://github.com/yourname/portfolio-site">
+      <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" />
+      <div class="project-content">
+        <div class="project-title">This website</div>
+        <div class="project-desc">Created this portfolio website so I can show off my programming skills when applying for jobs.</div>
+        <div class="tags">
+          <div class="tag">HTML&CSS</div>
+          <div class="tag">JavaScript</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-tags="python sql distributed" data-git="https://github.com/yourname/sampleproject">
+      <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg" />
+      <div class="project-content">
+        <div class="project-title">Example title</div>
+        <div class="project-desc">This is the project description</div>
+        <div class="tags">
+          <div class="tag">Python</div>
+          <div class="tag">SQL</div>
+          <div class="tag">Distributed System</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-tags="java networking" data-git="https://github.com/yourname/networkproj">
+      <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sun_rise_and_sunset.jpg/640px-Sun_rise_and_sunset.jpg" />
+      <div class="project-content">
+        <div class="project-title">Example title</div>
+        <div class="project-desc">This is the project description</div>
+        <div class="tags">
+          <div class="tag">Java</div>
+          <div class="tag">Networking</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="modal-backdrop" class="modal-backdrop"></div>
 
-  <!-- Modal Popup -->
-  <div id="project-modal" class="modal"
-    style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; padding:25px; width:420px; max-width:90%; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,0.25); z-index:1000;">
-    <span id="modal-close"
-      style="cursor:pointer; position:absolute; top:10px; right:15px; font-size:22px;">&times;</span>
+  <div id="project-modal" class="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; padding:25px; width:420px; max-width:90%; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,0.25); z-index:1000;">
+    <span id="modal-close" style="cursor:pointer; position:absolute; top:10px; right:15px; font-size:22px;">&times;</span>
     <h2 id="modal-title"></h2>
     <div id="modal-links" style="margin:10px 0; display:flex; gap:12px;"></div>
     <div id="modal-tags" style="margin:10px 0; display:flex; gap:8px; flex-wrap:wrap;"></div>
@@ -309,8 +305,6 @@
   <a href="index.html">Professional Experience</a> |
   <a href="projects.html">Projects</a> |
   <a href="personal.html">Personal</a>
-
-
 </footer>
 
 <script>
@@ -328,7 +322,6 @@
     });
   };
 
-  // Modal logic
   const modal = document.getElementById('project-modal');
   const modalClose = document.getElementById('modal-close');
   const modalTitle = document.getElementById('modal-title');
@@ -341,6 +334,7 @@
       const title = card.querySelector('.project-title').innerText;
       const desc = card.querySelector('.project-desc').innerText;
       const tags = card.dataset.tags.split(' ');
+      const git = card.dataset.git;
 
       modalTitle.innerText = title;
       modalDesc.innerText = desc;
@@ -348,8 +342,7 @@
       modalTags.innerHTML = tags.map(t => `<span style='border:2px solid #0077cc; padding:4px 10px; border-radius:20px; font-size:13px;'>${t}</span>`).join('');
 
       modalLinks.innerHTML = `
-        <a href='#' target='_blank'><img src='https://cdn-icons-png.flaticon.com/512/25/25231.png' width='28'></a>
-        <a href='#' target='_blank'><img src='https://cdn-icons-png.flaticon.com/512/1384/1384060.png' width='28'></a>
+        <a href='${git}' target='_blank'><img src='https://cdn-icons-png.flaticon.com/512/25/25231.png' width='28'></a>
       `;
 
       modal.classList.remove('hide');
@@ -378,6 +371,5 @@
 
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
-
 
 </html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Under Construction</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #e8e1cc;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+
+        header,
+        footer {
+            background: #d7d9e6;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        footer a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #000;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #000;
+            padding: 6px 12px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: #f3f3f3;
+        }
+
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+
+        .construction-icon {
+            font-size: 90px;
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+
+        p {
+            font-size: 18px;
+            max-width: 500px;
+        }
+
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      margin: auto;
+    }
+        .loader {
+            margin-top: 30px;
+            border: 6px solid rgba(0, 0, 0, 0.2);
+            border-top: 6px solid #000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+             @media (max-width: 700px) {
+      nav a {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      nav.active a {
+        display: block;
+        padding: 10px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="hamburger">☰</div>
+            <a href="index.html">Professional Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="personal.html">Personal</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="construction-icon">🚧</div>
+        <h1>Page Under Construction</h1>
+        <p>This page is currently being built. Please check back soon for updates!</p>
+        <div class="loader"></div>
+    </div>
+
+    <footer>
+        <a>All Pages:</a>
+        <a href="index.html">Professional Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="personal.html">Personal</a>
+    </footer>
+
+</body>
+
+<script>
+  const nav = document.querySelector('nav');
+  const burger = document.querySelector('.hamburger');
+  burger.onclick = () => nav.classList.toggle('active');
+</script>
+
+</html>
